@@ -52,6 +52,40 @@ header nav.desktop a{
     color: black;
     text-decoration: none;
 }
+
+header nav.mobile{
+    margin-top: 40px;
+    display: none;
+    float: right;
+    height: 32px;
+    width: 32px;
+    background-size: 100% 100%;
+    background-image: url('../images/icon_menu.png');
+    cursor: pointer;
+}
+
+header nav.mobile ul{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 92px;
+    z-index: 9;
+    border-bottom: 4px solid #eb2d2d;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+}
+
+header nav.mobile ul li{
+    font-size: 23px;
+    padding: 20px 0;
+    font-style: italic;
+}
+
+header nav.mobile ul li a{
+    color: black;
+    text-decoration: none;
+}
 /* /header */
 
 /* banner */
@@ -104,25 +138,97 @@ section.banner{
 }
 /* /banner */
 
-@media screen and (max-width: 1280px){
-    section.banner{
-        background-size: 90% auto;
-        background-position: 200% 100%;
-    }
+/* vehicles */
+section.vehicles{
+    padding: 90px 2%;
 }
 
-@media screen and (max-width: 1024px){
+section.vehicles .container{
+    max-width: 1000px;
+    padding: 40px 0;
+}
+
+section.vehicles .line-title > h2{
+    position: relative;
+    display: inline-block;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 27px;
+    text-transform: uppercase;
+    background: white;
+}
+
+.showcase{
+    float: left;
+    width: 33.3%;
+}
+
+.showcase .car-img{
+    width: 100%;
+    padding-top: 100%;
+    border: 8px solid white;
+    background-size: 100% 100%;
+}
+
+.showcase h2{
+    padding-left: 8px;
+    color: black;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.showcase p{
+    padding-top: 8px;
+    padding-left: 8px;
+    color: #353535;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.showcase a{
+    display: block;
+    margin-left: 8px;
+    margin-top: 16px;
+    width: 150px;
+    color: white;
+    line-height: 40px;
+    font-size: 16px;
+    font-style: italic;
+    text-align: center;
+    text-decoration: none;
+    background-color: #eb2d2d;
+    border-bottom: 5px solid #b21e1e;
+}
+
+.line-title{
+    max-width:1000px;
+    margin:0 auto;
+    position: relative;
+    text-align: center;
+}
+
+.ln1{
+    position: absolute;
+    top: 20px;
+    height: 1px;
+    width: 100%;
+    background: black
+}
+/* /vehicles */
+
+@media screen and (max-width: 768px){
     section.banner{
         background-size: cover;
-        background-position: center;
-        height: 70vw;
-        min-height: 500px;
+        background-position: 100px center;
+        height: 80vh;
     }
-}
-
-@media screen and (max-width: 720px){
-    nav.desktop{
+    
+    header nav.desktop{
         display: none;
+    }
+
+    header nav.mobile{
+        display: block;
     }
 }
 
@@ -132,6 +238,26 @@ section.banner{
     }
 
     .text-banner-single{
+        width: 240px;
         font-size: 18px;
+    }
+
+    section.vehicles .line-title h2{
+        font-size: 23px;
+    }
+
+    section.vehicles .container{
+        text-align: center;
+    }
+
+    .showcase{
+        display: inline-block;
+        float: none;
+        width: 70%;
+        margin-top: 20px;
+    }
+
+    .showcase a{
+        display: inline-block;
     }
 }
