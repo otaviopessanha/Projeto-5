@@ -406,6 +406,117 @@ footer p{
 }
 /* /footer */
 
+/* sell */
+section.sell{
+    min-height: 90%;
+    padding: 90px 0;
+}
+
+.content-sell{
+    margin-top: 40px;
+}
+
+.side-bar{
+    float: left;
+    width: 30%;
+}
+
+.search1{
+    width: 300px;;
+}
+
+.search1 h2{
+    font-size: 24px;
+    color: black;
+    font-weight: normal;
+}
+
+.search1 .price-bar{
+    width: 100%;
+    height: 20px;
+    background: white;
+    margin-top: 8px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    position: relative;
+    box-sizing: content-box;
+}
+
+.price-bar-fill{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30%;
+    height: 20px;
+    background: rgb(200, 200, 200);
+    border-radius: 20px;
+}
+
+.pointer-bar{
+    position: absolute;
+    left: 30%;
+    top: -3px;
+    transform: translateX(-50%);
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgb(210, 210, 210);
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.search-value{
+    margin-top: 8px;
+}
+
+.search-value p{
+    color: black;
+    font-size: 15px;
+}
+
+.search-value p:nth-of-type(1){
+    float: left;
+}
+
+.search-value p:nth-of-type(2){
+    float: right;
+}
+
+.search2{
+    margin-top: 40px;
+}
+
+.search2 h2{
+    font-size: 24px;
+    color: black;
+    font-weight: normal;
+}
+
+.form-sell-wraper{
+    margin-top: 10px;
+}
+
+.form-sell-wraper input{
+    display: none;
+}
+
+.form-sell-wraper label{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.form-sell-wraper span{
+    display: inline-block;
+    padding: 0 10px;
+    vertical-align: top;
+}
+/* /sell */
+
 @media screen and (max-width: 768px){
     section.banner{
         background-size: cover;
