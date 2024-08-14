@@ -16,7 +16,7 @@ html, body{
 
 .container{
     width: 100%;
-    max-width: 1280;
+    max-width: 1280px;
     margin: 0 auto;
 }
 /* /geral */
@@ -334,9 +334,10 @@ section.contact input:not(input[type='submit']){
 section.contact textarea{
     width: 100%;
     border: 1px solid #ccc;
-    height: 40px;
-    line-height: 40px;
-    padding-left: 15px;
+    height: 80px;
+    line-height: 15px;
+    padding: 15px 0 15px 15px;
+    resize: none;
 }
 
 section.contact input[type]{
@@ -354,23 +355,6 @@ section.contact input[type]{
     width: 50%;
 }
 /* /contact */
-
-@media screen and (max-width: 1100px){
-    .half1{
-        text-align: center;
-    }
-
-    .half1-wraper{
-        text-align: left;
-        padding-right: 0;
-    }
-    
-    .half1-wraper a{
-        display: block;
-        margin-left: 0;
-        margin-top: 15px;
-    }
-}
 
 /* footer */
 footer{
@@ -400,16 +384,17 @@ footer nav ul a{
 
 footer p{
     float: right;
+    padding: 0 35px;
     color: white;
     font-size: 19px;
     font-style: italic;
 }
 /* /footer */
 
-/* sell */
+/* Página venda - sell */
 section.sell{
     min-height: 90%;
-    padding: 90px 0;
+    padding: 90px 2%;
 }
 
 .content-sell{
@@ -422,7 +407,7 @@ section.sell{
 }
 
 .search1{
-    width: 300px;;
+    width: 90%;
 }
 
 .search1 h2{
@@ -449,7 +434,9 @@ section.sell{
     width: 30%;
     height: 20px;
     background: rgb(200, 200, 200);
-    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: linear-gradient(to bottom, rgb(238, 238, 238), rgb(200, 200, 200));
 }
 
 .pointer-bar{
@@ -457,11 +444,11 @@ section.sell{
     left: 30%;
     top: -3px;
     transform: translateX(-50%);
-    width: 26px;
+    width: 13px;
     height: 26px;
-    border-radius: 50%;
-    background: rgb(210, 210, 210);
-    border: 1px solid black;
+    background: linear-gradient(to bottom, rgb(245, 245, 245), rgb(200, 200, 200));
+    border-radius: 5px;
+    border: 1px solid #777;
     cursor: pointer;
 }
 
@@ -502,12 +489,29 @@ section.sell{
 
 .form-sell-wraper label{
     display: inline-block;
-    width: 32px;
-    height: 32px;
+    width: 20px;
+    height: 20px;
     border: 1px solid #ccc;
     border-radius: 3px;
     vertical-align: top;
     cursor: pointer;
+    position: relative;
+}
+
+.circle{
+    display: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    left: 9px;
+    top: 9px;
+    transform: translate(-50%, -50%);
+    background: black;
+}
+
+.form-sell-wraper input[type='checkbox']:checked + label > .circle{
+    display: block;
 }
 
 .form-sell-wraper span{
@@ -515,7 +519,33 @@ section.sell{
     padding: 0 10px;
     vertical-align: top;
 }
+
+.sell-showcase{
+    float: left;
+    width: 70%;
+}
+
+.sell-showcase > .showcase{
+    margin-top: 20px;
+}
 /* /sell */
+
+@media screen and (max-width: 1100px){
+    .half1{
+        text-align: center;
+    }
+
+    .half1-wraper{
+        text-align: left;
+        padding-right: 0;
+    }
+    
+    .half1-wraper a{
+        display: block;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}
 
 @media screen and (max-width: 768px){
     section.banner{
@@ -564,6 +594,26 @@ section.sell{
 
     footer p{
         float: none;
+    }
+
+    .side-bar{
+        width: 100%;
+        text-align: center;
+    }
+
+    .search1{
+        display: inline-block;
+    }
+
+    .search2{
+        text-align: left;
+        display: inline-block;
+    }
+    
+    .sell-showcase{
+        float: left;
+        text-align: center;
+        width: 100%;
     }
 }
 
