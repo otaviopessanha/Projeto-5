@@ -304,12 +304,12 @@ section.service-description{
 
 /* contact */
 section.contact{
-    padding: 80px 2%;
+    padding: 80px 2% 0 2%;
 }
 
 section.contact form{
     max-width: 600px;
-    margin: 50px auto;
+    margin: 30px auto;
 }
 
 section.contact .input-wraper{
@@ -325,18 +325,19 @@ section.contact form .input-wraper:nth-of-type(5){
 section.contact input:not(input[type='submit']){
     display: inline-block;
     width: 100%;
+    height: 60px;
     border: 1px solid #ccc;
-    height: 40px;
     line-height: 40px;
     padding-left: 15px;
 }
 
 section.contact textarea{
     width: 100%;
+    height: 140px;
     border: 1px solid #ccc;
-    height: 80px;
     line-height: 15px;
     padding: 15px 0 15px 15px;
+    font-size: 16px;
     resize: none;
 }
 
@@ -532,25 +533,30 @@ section.sell{
 
 /* Página veiculo-teste - sell-single */
 section.sell-single{
-    padding: 0 2%;
+    padding: 80px 2% 0 2%;
 }
 
 section.sell-single .container{
-    padding: 40px 0;
+    padding: 40px 0 0 0;
+    text-align: center;
 }
 
 .info-vehicle{
-    float: left;
+    display: inline-block;
     width: 60%;
 }
 
 .description-vehicle{
-    float: left;
-    width: 40%;
-    padding: 20px;
+    display: inline-block;
+    width: calc(40% - 4px);
+    padding: 60px  0 0 20px;
+    vertical-align: top;
+    text-align: left;
+    box-sizing: border-box;
 }
 
 .description-vehicle p{
+    font-size: 17px;
     max-width: 360px;
     margin-top: 25px;
 }
@@ -563,28 +569,79 @@ section.sell-single .container{
     width: 100%;
     padding-top: 70%;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+}
+
+.nav-galery-parent{
+    width: 100%;
+    padding: 36px;
+    position: relative;
+}
+
+.arrow-left-nav{
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform:  translateY(-50%);
+    background-image: url('../images/arrow-right.png');
+    background-size: 100% 100%;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.arrow-right-nav{
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform:  translateY(-50%);
+    background-image: url('../images/arrow-left.png');
+    background-size: 100% 100%;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.info-bread{
+    padding: 20px 0;
+    text-align: left;
+}
+
+.info-bread a{
+    text-decoration: none;
+    color: black;
+}
+
+.info-bread a:last-child{
+    color: red;
+}
+
+.info-bread span{
+    padding: 0 30px;
 }
 
 .nav-galery{
     width: 100%;
-    padding: 15px;
-    margin-top: 15px;
-    overflow-x: scroll;
+    overflow: hidden;
 }
 
 .nav-galery-wraper{
     width: 200%;
 }
 
-.mini-img{
+.mini-img-wraper{
     float: left;
     width: calc(33.3% * (100 / 200));
-    padding-top: calc(33.3% * (100 / 200) * 0.4);
-    border: 4px solid white;
+    padding: 9px;
+}
+
+.mini-img{
+    width: 100%;
+    padding-top: 70%;
     background-position: center;
     background-size: cover;
+    cursor: pointer;
 }
 /* /sell-single */
 
@@ -672,6 +729,24 @@ section.sell-single .container{
         float: left;
         text-align: center;
         width: 100%;
+    }
+
+    .info-vehicle{
+        width: 100%;
+    }
+
+    .description-vehicle{
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .description-vehicle a{
+        display: inline-block;
+    }
+
+    .description-vehicle p{
+        max-width: none;
     }
 }
 
