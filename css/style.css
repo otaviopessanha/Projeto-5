@@ -645,6 +645,56 @@ section.sell-single .container{
 }
 /* /sell-single */
 
+/* Página sobre - about */
+section.about{
+    min-height: 90%;
+    padding: 60px 2% 20px 2%;
+}
+
+section.about .container{
+    margin-top: 30px;
+}
+
+section.about .img-about{
+    width: 100%;
+    padding-top: 60%;
+    background-color: rgb(220, 220, 220);
+}
+
+section.about .author-description{
+    margin-top: 20px;
+}
+
+.author-description{
+    font-size: 24px;
+}
+
+.author-description p{
+    line-height: 28px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.author-description2{
+    margin-top: 40px;
+}
+
+.img-small{
+    float: left;
+    width: 30%;
+    padding-top: 30%;
+    /* background-image: url(''); */
+    background-color: rgb(220, 220, 220);
+}
+
+.author-description2 p{
+    float: left;
+    width: 70%;
+    line-height: 28px;
+    padding: 15px;
+}
+/* /about */
+
 @media screen and (max-width: 1100px){
     .half1{
         text-align: center;
@@ -777,5 +827,15 @@ section.sell-single .container{
 
     .showcase a{
         display: inline-block;
+    }
+
+    .img-small{
+        width: 100%;
+        padding-top: 100%;
+    }
+
+    .author-description2 p{
+        width: 100%;
+        padding: 20px 0;
     }
 }
